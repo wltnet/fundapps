@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { News } from "../types";
 
-const useFetch = (url: string, initialValue?: []) => {
+const useFetch = (url: string, initialValue?: News) => {
   const [data, setData] = useState(initialValue);
   const [loading, setLoading] = useState(true);
   useEffect(() => {

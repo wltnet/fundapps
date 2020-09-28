@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NewsCard /> should match the snapshot 1`] = `
+<Fragment>
+  <List
+    key="China Gives Unproven Covid-19 Vaccines to Thousands, With Risks Unknown - The New York Times"
+  >
+    <Title>
+      China Gives Unproven Covid-19 Vaccines to Thousands, With Risks Unknown - The New York Times
+    </Title>
+    <div>
+      <Date>
+        2020-09-26
+      </Date>
+      <Source>
+        New York Times
+      </Source>
+    </div>
+  </List>
+  <List
+    key="U.S. Sets Export Controls on China’s Top Chip Maker - The Wall Street Journal"
+  >
+    <Title>
+      U.S. Sets Export Controls on China’s Top Chip Maker - The Wall Street Journal
+    </Title>
+    <div>
+      <Date>
+        2020-09-26
+      </Date>
+      <Source>
+        The Wall Street Journal
+      </Source>
+    </div>
+  </List>
+  <List
+    key="Tesla Model S Plaid may be required to use a parachute when racing in drag strips - Teslarati"
+  >
+    <Title>
+      Tesla Model S Plaid may be required to use a parachute when racing in drag strips - Teslarati
+    </Title>
+    <div>
+      <Date>
+        2020-09-26
+      </Date>
+      <Source>
+        Teslarati
+      </Source>
+    </div>
+  </List>
+  <List
+    key="Amazon's new Ring camera is actually a flying drone -- for inside your home - CNET"
+  >
+    <Title>
+      Amazon's new Ring camera is actually a flying drone -- for inside your home - CNET
+    </Title>
+    <div>
+      <Date>
+        2020-09-26
+      </Date>
+      <Source>
+        CNET
+      </Source>
+    </div>
+  </List>
+  <List
+    key="How Tesla, Nikola and Donald Trump are all connected - Yahoo Finance"
+  >
+    <Title>
+      How Tesla, Nikola and Donald Trump are all connected - Yahoo Finance
+    </Title>
+    <div>
+      <Date>
+        2020-09-26
+      </Date>
+      <Source>
+        Yahoo Entertainment
+      </Source>
+    </div>
+  </List>
+</Fragment>
+`;
