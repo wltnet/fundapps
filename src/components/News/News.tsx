@@ -11,6 +11,8 @@ const News = (): React.ReactElement => {
   );
 
   const [numberOfitemsShown, setNumberOfitemsShown] = React.useState<number>(5);
+  const [filtered, setFiltered] = React.useState<boolean>(false);
+  const [filteredData, setfilteredData] = React.useState<Article[]>([]);
 
   const showMore = () => {
     setNumberOfitemsShown(numberOfitemsShown + 5);
@@ -29,16 +31,30 @@ const News = (): React.ReactElement => {
       : [];
   };
 
+  const onChange = (event: React.ChangeEvent) => {
+    const { value } = event.target as HTMLInputElement;
+    if (value !== "Filter by source") {
+      setFiltered(true);
+      setfilteredData(getFilteredData(value));
+    }
+  };
+
+  const getFilteredData = (source: string) => {
+    return data
+      ? data.articles.filter((news: Article) => news.source.name === source)
+      : [];
+  };
+
   return (
     <div>
       <h1>News</h1>
       {loading && <div>Loading...</div>}
       {data && (
         <>
-          <Dropdown list={getSource()} onChange={() => {}} />
+          <Dropdown list={getSource()} onChange={onChange} />
           <ul>
             <NewsCard
-              data={data.articles}
+              data={filtered ? filteredData : data.articles}
               numberOfitemsShown={numberOfitemsShown}
             />
           </ul>

@@ -5,6 +5,7 @@ import Button from "../Button";
 import NewsCard from "../NewsCard";
 import Dropdown from "../Dropdown";
 import mockData from "../../util/mockData";
+import { List } from "../NewsCard/styled";
 
 jest.mock("../../util/useFetch", () => jest.fn(() => mockData));
 
@@ -47,5 +48,15 @@ describe("<News />", () => {
     expect(wrapper.find(NewsCard).props().numberOfitemsShown).toBe(10);
     wrapper.find(Button).simulate("click");
     expect(wrapper.find(NewsCard).props().numberOfitemsShown).toBe(15);
+  });
+
+  it("should filter result when select source in dropdown", () => {
+    const wrapper = shallow(<News />);
+
+    wrapper.find(Dropdown).prop("onChange")({ target: { value: "CNET" } });
+    expect(wrapper.find(NewsCard).dive().find(List)).toHaveLength(2);
+
+    wrapper.find(Dropdown).prop("onChange")({ target: { value: "USA Today" } });
+    expect(wrapper.find(NewsCard).dive().find(List)).toHaveLength(1);
   });
 });
