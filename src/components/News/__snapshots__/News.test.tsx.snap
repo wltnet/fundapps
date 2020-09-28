@@ -5,5 +5,9 @@ exports[`<News /> should match the snapshot 1`] = `
   <h1>
     News
   </h1>
+  <Button
+    onClick={[Function]}
+    title="show more"
+  />
 </div>
 `;
