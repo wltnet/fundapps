@@ -5,6 +5,28 @@ exports[`<News /> should match the snapshot 1`] = `
   <h1>
     News
   </h1>
+  <Dropdown
+    list={
+      Array [
+        "New York Times",
+        "The Wall Street Journal",
+        "Teslarati",
+        "CNET",
+        "Yahoo Entertainment",
+        "CarScoops",
+        "Bloomberg",
+        "CNBC",
+        "CNN",
+        "Associated Press",
+        "WRAL.com",
+        "InsideEVs ",
+        "Hawaii News Now",
+        "USA Today",
+        "WJHL-TV News Channel 11",
+      ]
+    }
+    onChange={[Function]}
+  />
   <ul>
     <NewsCard
       data={
